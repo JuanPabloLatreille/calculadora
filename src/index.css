@@ -5,9 +5,82 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --primary: #d81e5b;
+  --secondary: #8c38ff;
+  --dark: #131a26;
+  --light: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.projeto {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.calculadora {
+  width: 100%;
+  max-width: 400px;
+  background-color: #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  padding: 16px;
+  text-align: right;
+  background-color: var(--dark);
+  color: var(--light)
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.operadores {
+  display: flex;
+}
+
+.operadores button {
+  flex: 1 1 0%;
+  background-color: var(--primary);
+}
+
+.numeros {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.numeros button {
+  flex: 1 1 33.333%;
+  max-width: 33.333;
+  background-color: var(--dark);
 }
