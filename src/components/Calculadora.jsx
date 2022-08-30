@@ -62,6 +62,11 @@ export default function Calculadora() {
 
     }
 
+    //FUNÇÃO PARA RECARREGAR PÁGINA
+    const recarregarPagina = () => {
+        window.location.reload(false);
+    }
+
 
     return (
         <div className="projeto">
@@ -79,6 +84,7 @@ export default function Calculadora() {
                     <button onClick={() => updateCalc('+')}>+</button>
                     <button onClick={() => updateCalc('-')}>-</button>
                     <button onClick={apagar}>DEL</button>
+                    <button onClick={recarregarPagina}>C</button>
                 </div>
 
                 <div className="numeros">
